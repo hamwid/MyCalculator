@@ -58,7 +58,11 @@ public class MyCalculator {
       "\nStep 4: Repeat steps 2 and 3."+
       "\nTerminate software by entering anything else at step 2 or step 3.");
   }
-  
+
+  public double getFirstNumber(){
+    return firstNumber;
+  }
+
   public static void main(String[] args) {
     printInstructions();
     System.out.print("Enter double: ");
