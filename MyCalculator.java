@@ -72,8 +72,9 @@ public class MyCalculator {
   public String getOperator(){
     return operator;
   }
-  public void callAdd(double d1, double d2){
+  public double callAdd(double d1, double d2){
     add(d1, d2);
+    return answer;
   }
 
   public static void main(String[] args) {
