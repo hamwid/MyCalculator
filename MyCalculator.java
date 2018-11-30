@@ -76,6 +76,18 @@ public class MyCalculator {
     add(d1, d2);
     return answer;
   }
+  public double callSub(double d1, double d2){
+    sub(d1, d2);
+    return answer;
+  }
+  public double callMult(double d1, double d2){
+    mult(d1, d2);
+    return answer;
+  }
+  public double callDiv(double d1, double d2){
+    div(d1, d2);
+    return answer;
+  }
 
   public static void main(String[] args) {
     printInstructions();
