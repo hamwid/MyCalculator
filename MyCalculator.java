@@ -59,6 +59,7 @@ public class MyCalculator {
       "\nTerminate software by entering anything else at step 2 or step 3.");
   }
 
+  //Methods used during test
   public double getFirstNumber(){
     return firstNumber;
   }
