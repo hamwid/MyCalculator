@@ -62,6 +62,15 @@ public class MyCalculator {
   public double getFirstNumber(){
     return firstNumber;
   }
+  public double getSecondNumber(){
+    return secondNumber;
+  }
+  public double getAnswer(){
+    return answer;
+  }
+  public String getOperator(){
+    return operator;
+  }
 
   public static void main(String[] args) {
     printInstructions();
