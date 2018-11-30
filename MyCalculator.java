@@ -4,16 +4,20 @@ import java.lang.NumberFormatException;
 import java.text.DecimalFormat;
 
 public class MyCalculator {
-  private static double  firstNumber     =    0;
-  private static double  secondNumber    =    0;
-  private static double  answer          =    0;
-  private static String  operator        = "-1";
-  private static boolean continueLoop    = true;
+  private static double  firstNumber;
+  private static double  secondNumber;
+  private static double  answer;
+  private static String  operator;
+  private static boolean continueLoop ;
   private static Scanner scan            = new Scanner(System.in);
   private static DecimalFormat precision = new DecimalFormat("#0.00");
 
   public static final String ANSI_CYAN  = "\u001B[36m";
   public static final String ANSI_RESET = "\u001B[0m";
+
+  public MyCalculator(){
+    reset();
+  }
 
   private static void add(double d1, double d2){
     answer = d1 + d2;
@@ -26,6 +30,14 @@ public class MyCalculator {
   }
   private static void div(double d1, double d2){
     answer = d1 / d2;
+  }
+
+  public static void reset(){
+    firstNumber     =    0;
+    secondNumber    =    0;
+    answer          =    0;
+    operator        = "-1";
+    continueLoop    = true;
   }
 
   private static void enterDouble(){
@@ -59,8 +71,34 @@ public class MyCalculator {
       "\nTerminate software by entering anything else at step 2 or step 3.");
   }
 
+  //Methods used during test
   public double getFirstNumber(){
     return firstNumber;
+  }
+  public double getSecondNumber(){
+    return secondNumber;
+  }
+  public double getAnswer(){
+    return answer;
+  }
+  public String getOperator(){
+    return operator;
+  }
+  public double callAdd(double d1, double d2){
+    add(d1, d2);
+    return answer;
+  }
+  public double callSub(double d1, double d2){
+    sub(d1, d2);
+    return answer;
+  }
+  public double callMult(double d1, double d2){
+    mult(d1, d2);
+    return answer;
+  }
+  public double callDiv(double d1, double d2){
+    div(d1, d2);
+    return answer;
   }
 
   public static void main(String[] args) {
